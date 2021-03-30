@@ -1,0 +1,141 @@
+/*! root file */
+:root {
+  /** variables */
+  /* main variables */
+  --main-bg: ;
+  --main-color: ;
+  --white: #fff;
+  --black: #000;
+  
+}
+/** all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*! ===== MOBILE FIRST RWD ===== */
+/*! the ffg queries determine the basic styles of the elements in the file */
+/*! the main media queries are located at the end of this file */
+/** extra-small=320px (320px-400px) */
+/* body */
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: normal;
+  background-color: var(--main-bg);
+  color: var(--main-color);
+}
+/* text elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1.3em;
+  line-height: 130%;
+  text-align: center;
+}
+h1 {
+  margin-bottom: 0.8rem;
+}
+h2 {
+  margin-bottom: 0.75rem;
+}
+h3 {
+  margin-bottom: 0.6rem;
+}
+h4 {
+  margin-bottom: 0.5rem;
+}
+h5 {
+  margin-bottom: 0.4rem;
+}
+h6 {
+  margin-bottom: 0.3rem;
+}
+/* paragraph elements */
+p {
+  padding-bottom: 0.5rem;
+  text-align: inherit;
+}
+/** small=400px (400px-608px) */
+@media screen and (min-width: 400px) {
+  /* body */
+  body {
+    font-size: 100%;
+  }
+  /* text elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    line-height: 1.3em;
+    line-height: 130%;
+  }
+}
+/** medium=608px (608px-960px) */
+@media screen and (min-width: 608px) {
+  /* body */
+  body {
+    font-size: 110%;
+  }
+  /* text elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    line-height: 1.4em;
+    line-height: 140%;
+  }
+}
+/** large=960px (960px-1440px) */
+@media screen and (min-width: 960px) {
+  /* body */
+  body {
+    font-size: 120%;
+  }
+  /* text elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    line-height: 1.5em;
+    line-height: 150%;
+  }
+}
+/** extra-large=1440px+ */
+@media screen and (min-width: 1440px) {
+  /* body */
+  body {
+    font-size: 130%;
+  }
+}
+/*! ==========  */
+/*! ==========  */
+/*! ==========  */
+
+/** to ensure that when you click on an id link, the header will not cover the  beginning of the content the id is pointing to */
+[id] {
+  scroll-margin-top: 5em;
+}
+/** reseting the link states to the page's main color and no decoration */
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: var(--main-color);
+}
