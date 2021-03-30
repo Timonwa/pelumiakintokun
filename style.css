@@ -2,7 +2,7 @@
 :root {
   /** variables */
   /* main variables */
-  --main-bg: ;
+  --main-bg: rgb(247, 228, 121);
   --main-color: ;
   --white: #fff;
   --black: #000;
@@ -138,4 +138,39 @@ a:active,
 a:visited {
   text-decoration: none;
   color: var(--main-color);
+}
+header img{
+  height: 200px;
+  width: auto;
+}
+.project figure{
+  height: 200px;
+  width: 300px;
+  background-image: url("img/sample-image.jpg");
+  background-position: center;
+  background-size: cover;
+
+}
+.skill img{
+  height: 50px;
+  width: 50px;
+  border: solid 1px #eee;
+  padding: 5px;
+  background-color: rgba(238, 238, 238, 0.418);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+footer i{
+  width: 30px;
+  border: solid 1px #eee;
+  padding: 5px;
+  background-color: rgba(238, 238, 238, 0.418);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 }
