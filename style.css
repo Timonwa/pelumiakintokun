@@ -1,18 +1,21 @@
 /*! root file */
 :root {
   /** variables */
-  /* main variables */
-  --main-bg: rgb(247, 228, 121);
-  --main-color: ;
+  /* main color variables */
+  --main-bg: #40403e;
+  --main-color: #daa520;
   --white: #fff;
   --black: #000;
-  
+
+  /* dimensions */
+  --nav-height: 50px;
 }
 /** all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: solid 1px #ddd; */
 }
 /*! ===== MOBILE FIRST RWD ===== */
 /*! the ffg queries determine the basic styles of the elements in the file */
@@ -25,6 +28,7 @@ body {
   font-weight: normal;
   background-color: var(--main-bg);
   color: var(--main-color);
+  border: solid 1px #ddd;
 }
 /* text elements */
 h1,
@@ -139,19 +143,21 @@ a:visited {
   text-decoration: none;
   color: var(--main-color);
 }
-header img{
-  height: 200px;
-  width: auto;
+/* list */
+ul {
+  list-style: none;
+  list-style-position: unset;
 }
-.project figure{
+/*! end of basic css styles */
+/*! ========== */
+.project figure {
   height: 200px;
   width: 300px;
   background-image: url("img/sample-image.jpg");
   background-position: center;
   background-size: cover;
-
 }
-.skill img{
+.skill img {
   height: 50px;
   width: 50px;
   border: solid 1px #eee;
@@ -163,7 +169,7 @@ header img{
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
 }
-footer i{
+footer i {
   width: 30px;
   border: solid 1px #eee;
   padding: 5px;
@@ -173,4 +179,156 @@ footer i{
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
+}
+/** body */
+body.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+/* nav */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+/** nav-bar */
+nav > div.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: var(--nav-height);
+  padding: 10px;
+  position: relative;
+  background-color: var(--main-bg);
+  border-bottom: 2px solid var(--main-color);
+  box-shadow: 0px 1px 5px var(--main-color);
+}
+/* logo */
+nav > div.nav > ul.logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  height: 30px;
+}
+/* the individual nav links */
+nav > div.nav li.nav-link,
+nav > div.nav li.nav-link a {
+  width: 80px;
+  height: 30px;
+  padding: 5px 0;
+  text-align: center;
+}
+/** the menu toggle */
+nav > div.nav > div.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 50%;
+  height: 30px;
+}
+/* the menu toggle bars */
+nav > div.nav > div.menu-toggle > div.bar {
+  width: 25px;
+  height: 4px;
+  background-color: var(--main-color);
+  margin: 3px;
+  margin-right: 5px;
+  border: none;
+}
+/* nav links */
+nav > div.nav > ul.nav-links {
+  position: absolute;
+  top: 50px;
+  right: -170px;
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 160px;
+  background-color: var(--main-bg);
+  /* display: none; */
+}
+/*thr individual links in the nav links */
+nav > div.nav > ul.nav-links > li.nav-link {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/** header */
+header div#intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: calc(var(--nav-height) / 2);
+  padding-left: 80px;
+}
+/* line in header */
+header div.line {
+  width: 5px;
+  height: 90px;
+  display: flex;
+  justify-self: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  border: solid;
+}
+/* my name and occupation */
+header div.my-name {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 3px;
+}
+/* my name */
+header div.my-name > h3 {
+  text-align: left;
+  margin-bottom: 5px;
+  color: gold;
+}
+/* my occupation */
+header div.my-name > h4 {
+  text-align: left;
+  margin-bottom: 0;
+}
+/* my profile image */
+header > div.profile-img {
+  height: 100vh;
+  /* border: solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 1px;
+}
+/* the image container */
+header > div.profile-img > figure {
+  border: solid 4px;
+  position: relative;
+  height: 200px;
+  width: 180px;
+  color: gold;
+}
+/* the image */
+header > div.profile-img > figure > img {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  height: 200px;
+  width: auto;
 }
