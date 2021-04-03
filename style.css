@@ -4,7 +4,7 @@
   /* main color variables */
   --main-bg: #303233;
   --main-bg2: #40403e;
-  --main-bg3: #40403e;
+  --main-bg3: #303535;
   --main-color: #daa520;
   --main-color2: #ffd700;
   --main-color3: #c0a403;
@@ -350,7 +350,7 @@ section#about div.profile-img {
   display: none;
 }
 section#about {
-  background-color: var(--main-bg);
+  background-color: var(--main-bg3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -712,7 +712,6 @@ footer div.title {
 @media screen and (min-width: 900px) {
   /* about section */
   section#about {
-    border-top: solid;
     background-color: var(--main-bg3);
   }
   /* about section wrapper */
