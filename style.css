@@ -13,7 +13,7 @@
 
   /* dimensions */
   --nav-height: 50px;
-  --section-div-margin: 40px 20px;
+  --section-div-margin: 40px 100px;
   --section-div-padding: 20px;
 }
 /** all elements */
@@ -22,18 +22,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*! ===== MOBILE FIRST RWD ===== */
+/*! ===== LARGE SCREEN FIRST RWD ===== */
 /*! the ffg queries determine the basic styles of the elements in the file */
-/*! the main media queries are located at the end of this file */
-/** extra-small=320px (320px-400px) */
+/*! the main media queries are located at the end of this file this is just the default media query styles */
+/** extra-large=1440px+ */
+@media screen and (max-width: 1440px) {
+  /* body */
+  body {
+    font-size: 19px;
+  }
+}
+/** large screen=1024px (960px-1024px) */
 /* body */
 body {
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: normal;
   background-color: var(--main-bg);
   color: var(--main-color);
   border: solid 1px #ddd;
+  background-color: green;
 }
 /* text elements */
 h1,
@@ -43,8 +51,8 @@ h4,
 h5,
 h6,
 p {
-  line-height: 1.3em;
-  line-height: 130%;
+  line-height: 1.5em;
+  line-height: 150%;
   text-align: center;
   letter-spacing: 3px;
 }
@@ -66,14 +74,26 @@ h5 {
 h6 {
   margin-bottom: 0.3rem;
 }
-/* paragraph elements */
-p {
-  padding-bottom: 0.5rem;
-  text-align: inherit;
-  letter-spacing: 2px;
+/** medium=608px (608px-960px) */
+@media screen and (max-width: 960px) {
+  /* body */
+  body {
+    font-size: 17px;
+  }
+  /* text elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    line-height: 1.4em;
+    line-height: 140%;
+  }
 }
 /** small=400px (400px-608px) */
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 608px) {
   :root {
     --section-div-margin: 40px 40px;
   }
@@ -93,11 +113,11 @@ p {
     line-height: 130%;
   }
 }
-/** medium=608px (608px-960px) */
-@media screen and (min-width: 608px) {
+/** small=400px (400px and below) */
+@media screen and (max-width: 400px) {
   /* body */
   body {
-    font-size: 17px;
+    font-size: 16px;
   }
   /* text elements */
   h1,
@@ -107,39 +127,13 @@ p {
   h5,
   h6,
   p {
-    line-height: 1.4em;
-    line-height: 140%;
-  }
-}
-/** large=960px (960px-1440px) */
-@media screen and (min-width: 960px) {
-  /* body */
-  body {
-    font-size: 18px;
-  }
-  /* text elements */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    line-height: 1.5em;
-    line-height: 150%;
-  }
-}
-/** extra-large=1440px+ */
-@media screen and (min-width: 1440px) {
-  /* body */
-  body {
-    font-size: 19px;
+    line-height: 1.3em;
+    line-height: 130%;
   }
 }
 /*! ==========  */
 /*! ==========  */
 /*! ==========  */
-
 /** to ensure that when you click on an id link, the header will not cover the  beginning of the content the id is pointing to */
 [id] {
   scroll-margin-top: 5em;
@@ -161,13 +155,17 @@ ul {
 /*! end of basic css styles */
 /*! ========== */
 /** body */
-body.container {
+body div.container {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   background-color: var(--main-bg);
+  background-color: red;
+}
+section {
+  width: 100vw;
 }
 /** main colors */
 h1,
@@ -226,12 +224,7 @@ nav > div.nav > ul.logo > li.nav-link a {
 }
 /** the menu toggle */
 nav > div.nav > div.menu-toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  width: 50%;
-  height: 30px;
+  display: none;
 }
 /* the menu toggle bars */
 nav > div.nav > div.menu-toggle > div.bar {
@@ -243,16 +236,14 @@ nav > div.nav > div.menu-toggle > div.bar {
 }
 /* nav links */
 nav > div.nav > ul.nav-links {
-  position: absolute;
-  top: 50px;
-  right: -170px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
-  width: 160px;
   background-color: var(--main-bg);
+  width: 70%;
+  height: 30px;
 }
 /* the individual links in the nav links */
 nav > div.nav > ul.nav-links > li.nav-link {
@@ -268,10 +259,10 @@ header {
 }
 header > div {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 }
 header > div div#intro {
   height: 100vh;
@@ -329,26 +320,10 @@ section#about div.profile-img > figure {
   box-shadow: 0px 0px 5px inset;
 }
 /* the image */
-header > div > div.profile-img > figure > img,
-section#about img {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  height: 190px;
-  width: auto;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-}
-/** about section */
-/* my about profile image */
-section#about div.profile-img {
-  height: initial;
-  width: initial;
+header > div > div.profile-img {
   display: none;
 }
+/** about section */
 section#about {
   background-color: var(--main-bg3);
   display: flex;
@@ -370,7 +345,46 @@ section#about > div > div.about-body {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: stretch;
-  /* text-align: justify; */
+}
+/* my about profile image */
+section#about div.profile-img {
+  height: inherit;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  padding: 50px;
+}
+section#about div.profile-img > figure {
+  border: solid 4px;
+  position: relative;
+  height: 250px;
+  width: 240px;
+  color: var(--main-color2);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  box-shadow: 0px 0px 5px inset;
+}
+section#about img {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  height: 240px;
+  width: 230px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+/* about section profile discritpion */
+section#about div.about-description p {
+  padding: 5px 10px;
+  text-align: left;
 }
 /* about section contacts */
 section#about > div > div.contacts {
@@ -379,7 +393,7 @@ section#about > div > div.contacts {
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
-  width: 120px;
+  width: 200px;
 }
 /* about section contact links icon */
 section#about > div > div.contacts > p.contact-link {
@@ -407,6 +421,7 @@ section#projects {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 }
 /* project wrapper */
 section#projects > div {
@@ -415,7 +430,7 @@ section#projects > div {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: var(--section-div-margin);
+  margin: 40px;
   padding: var(--section-div-padding);
 }
 /** the projects */
@@ -429,7 +444,7 @@ section#projects > div > div.project-section {
 /* the individual project */
 section#projects > div > div.project-section > div.project {
   margin: 20px;
-  width: 280px;
+  width: 240px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -544,15 +559,19 @@ section#projects > div > div.project-section > div.project > div.tags > p.tag {
 /** skills section */
 section#skills {
   background-color: var(--main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 }
 /* skills section container */
 section#skills > div {
-  margin: var(--section-div-margin);
-  padding: var(--project-div-padding);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 40px;
+  padding: var(--project-div-padding);
 }
 /* skills section container */
 section#skills > div > .skills-section {
@@ -560,6 +579,7 @@ section#skills > div > .skills-section {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 10px;
 }
 /* skills section groupings */
 section#skills > div > .skills-section > div {
@@ -567,7 +587,7 @@ section#skills > div > .skills-section > div {
   display: flex;
   flex-direction: column;
   margin: 20px;
-  width: 280px;
+  width: 260px;
   padding: 10px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -622,10 +642,11 @@ footer {
   align-items: flex-end;
   height: 200px;
   padding-bottom: 10px;
+  width: 100vw;
 }
 footer > div {
-  padding: 10px;
   margin: 0 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -633,6 +654,7 @@ footer > div {
 }
 /** contact list */
 footer > div > div {
+  width: 600px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -643,7 +665,6 @@ footer > div > div {
 footer > div > div > p {
   padding: 10px;
 }
-
 /* contact icons */
 footer i {
   width: 30px;
@@ -664,97 +685,82 @@ footer i {
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
 }
-/* designer */
+/* tiyle */
 footer div.title {
   height: initial;
 }
-/*! media queries */
-@media screen and (min-width: 450px) {
-  /* my name and occupation */
-  header > div > div#intro > div.my-name {
-    font-size: 2em;
-    border-width: 8px;
-  }
-  /* the image container */
-  header > div > div.profile-img > figure {
-    height: 300px;
-    width: 270px;
-  }
-  /* the image */
-  header > div > div.profile-img > figure > img {
-    height: 290px;
-    width: 100%;
-  }
-  /* about section contacts */
-  section#about > div {
-    margin: 70px;
-  }
-  /* about section contacts */
-  section#about > div > div.contacts {
-    width: 200px;
-  }
-}
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 770px) {
   /** the menu toggle */
   nav > div.nav > div.menu-toggle {
-    display: none;
+    display: block;
+  }
+  /** the menu toggle */
+  nav > div.nav > div.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 50%;
+    height: 30px;
+  }
+  /* the menu toggle bars */
+  nav > div.nav > div.menu-toggle > div.bar {
+    width: 25px;
+    height: 4px;
+    background-color: var(--main-color);
+    margin: 3px;
+    margin-right: 5px;
   }
   /* nav links */
   nav > div.nav > ul.nav-links {
-    top: 0;
-    right: 0;
-    flex-direction: row;
-    width: 70%;
-    position: initial;
-    height: 30px;
-  }
-}
-@media screen and (min-width: 900px) {
-  /* about section */
-  section#about {
-    background-color: var(--main-bg3);
-  }
-  /* about section wrapper */
-  section#about > div {
-    width: initial;
-  }
-  /* about section body */
-  section#about > div > div.about-body {
-    width: initial;
-  }
-  /* header profile image */
-  header > div div.profile-img {
     display: none;
   }
   /* about section profile image */
   section#about div.profile-img {
-    display: block;
+    display: none;
+  }
+  /* the profile image */
+  header > div > div.profile-img {
+    /* display: none; */
+    height: 100vh;
+    width: 100%;
     display: flex;
-    padding: 50px;
-    background-color: inherit;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg2);
+    padding: 20px;
   }
-  /* about section profile discritpion */
-  section#about div.about-description {
-    padding: 10px;
+  /* the image container */
+  header > div > div.profile-img > figure {
+    border: solid 4px;
+    position: relative;
+    height: 400px;
+    width: 380px;
+    color: var(--main-color2);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    box-shadow: 0px 0px 5px inset;
   }
-  /* about section profile image container*/
-  section#about div.profile-img > figure {
-    height: 250px;
-    width: 240px;
-  }
-  /* the actual image */
-  section#about div.profile-img > figure img {
-    height: 240px;
-    width: 230px;
+  /* the image */
+  header > div > div.profile-img > figure > img {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    height: 390px;
+    width: 370px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
   }
 }
-@media screen and (min-width: 1000px) {
-  /* about section wrapper */
-  section#about > div {
-    margin: 100px;
-  }
-  /* the individual project */
-  section#projects > div > div.project-section > div.project {
-    width: 260px;
+@media screen and (max-width: 770px) {
+  /** contact list */
+  footer > div > div {
+    width: 300px;
   }
 }
