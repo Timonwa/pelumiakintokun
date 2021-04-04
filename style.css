@@ -41,7 +41,6 @@ body {
   background-color: var(--main-bg);
   color: var(--main-color);
   border: solid 1px #ddd;
-  background-color: green;
 }
 /* text elements */
 h1,
@@ -94,8 +93,6 @@ h6 {
 }
 /** small=400px (400px-608px) */
 @media screen and (max-width: 608px) {
-  :root {
-    --section-div-margin: 40px 40px;
   }
   /* body */
   body {
@@ -162,7 +159,6 @@ body div.container {
   justify-content: center;
   align-items: center;
   background-color: var(--main-bg);
-  background-color: red;
 }
 section {
   width: 100vw;
@@ -202,6 +198,7 @@ nav > div.nav {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;
   height: var(--nav-height);
   padding: 20px;
   position: relative;
@@ -211,28 +208,26 @@ nav > div.nav {
 /* logo */
 nav > div.nav > ul.logo {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   width: 50%;
   height: 30px;
+  margin: 10px 0;
+  margin-left: 5px;
 }
 /* the individual nav links */
-nav > div.nav > ul.logo > li.nav-link a {
+nav > div.nav > ul.logo > li.nav-link  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80px;
-  padding: 5px 0;
+  padding:  0;
   text-align: center;
 }
 /** the menu toggle */
 nav > div.nav > div.menu-toggle {
   display: none;
-}
-/* the menu toggle bars */
-nav > div.nav > div.menu-toggle > div.bar {
-  width: 25px;
-  height: 4px;
-  background-color: var(--main-color);
-  margin: 3px;
-  margin-right: 5px;
 }
 /* nav links */
 nav > div.nav > ul.nav-links {
@@ -242,16 +237,9 @@ nav > div.nav > ul.nav-links {
   justify-content: space-around;
   align-items: center;
   background-color: var(--main-bg);
-  width: 70%;
+  width: 50%;
   height: 30px;
-}
-/* the individual links in the nav links */
-nav > div.nav > ul.nav-links > li.nav-link {
-  width: 100%;
-  min-height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 10px 0;
 }
 /** header */
 header {
@@ -444,7 +432,7 @@ section#projects > div > div.project-section {
 /* the individual project */
 section#projects > div > div.project-section > div.project {
   margin: 20px;
-  width: 240px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -570,8 +558,8 @@ section#skills > div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 40px;
-  padding: var(--project-div-padding);
+  margin: var(--section-div-margin);
+  padding: var(--section-div-padding);
 }
 /* skills section container */
 section#skills > div > .skills-section {
@@ -587,7 +575,7 @@ section#skills > div > .skills-section > div {
   display: flex;
   flex-direction: column;
   margin: 20px;
-  width: 260px;
+  width: 280px;
   padding: 10px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -690,12 +678,13 @@ footer div.title {
   height: initial;
 }
 @media screen and (max-width: 770px) {
-  /** the menu toggle */
-  nav > div.nav > div.menu-toggle {
-    display: block;
+    :root {
+    --section-div-margin: 40px 70px;
+    --section-div-padding: 10px;
   }
   /** the menu toggle */
   nav > div.nav > div.menu-toggle {
+    display: block;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -711,6 +700,15 @@ footer div.title {
     margin: 3px;
     margin-right: 5px;
   }
+  /* the individual links in the nav links */
+nav > div.nav > ul.nav-links > li.nav-link {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
   /* nav links */
   nav > div.nav > ul.nav-links {
     display: none;
@@ -734,8 +732,8 @@ footer div.title {
   header > div > div.profile-img > figure {
     border: solid 4px;
     position: relative;
-    height: 400px;
-    width: 380px;
+    height: 300px;
+    width: 280px;
     color: var(--main-color2);
     border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -749,8 +747,8 @@ footer div.title {
     position: absolute;
     top: -20px;
     left: -20px;
-    height: 390px;
-    width: 370px;
+    height: 290px;
+    width: 270px;
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -758,9 +756,25 @@ footer div.title {
     -o-border-radius: 2px;
   }
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 500px) {
+    :root {
+    --section-div-margin: 40px 20px;
+  }
   /** contact list */
   footer > div > div {
     width: 300px;
   }
+  hader > div > div.profile-img > figure{
+    width: 250px;
+    height: 240px;
+  }
+   heder > div > div.profile-img > figure> img{
+    width: 240px;
+    height: 230px;
+  }
 }
+@media screen and (max-width: 320px) {
+    :root {
+    --section-div-margin: 40px 0px;
+  }
+}  
