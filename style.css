@@ -254,7 +254,7 @@ nav > div.nav > ul.nav-links {
   width: 160px;
   background-color: var(--main-bg);
 }
-/*the individual links in the nav links */
+/* the individual links in the nav links */
 nav > div.nav > ul.nav-links > li.nav-link {
   width: 100%;
   min-height: 70px;
@@ -733,15 +733,14 @@ footer div.title {
     padding: 50px;
     background-color: inherit;
   }
-   /* about section profile discritpion */
+  /* about section profile discritpion */
   section#about div.about-description {
     padding: 10px;
   }
-   /* about section profile image container*/
+  /* about section profile image container*/
   section#about div.profile-img > figure {
     height: 250px;
     width: 240px;
-
   }
   /* the actual image */
   section#about div.profile-img > figure img {
@@ -750,12 +749,12 @@ footer div.title {
   }
 }
 @media screen and (min-width: 1000px) {
-   /* about section wrapper */
+  /* about section wrapper */
   section#about > div {
     margin: 100px;
   }
-/* the individual project */
-section#projects > div > div.project-section > div.project {
-width: 260px;
-}
+  /* the individual project */
+  section#projects > div > div.project-section > div.project {
+    width: 260px;
+  }
 }
