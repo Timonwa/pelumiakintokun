@@ -216,12 +216,12 @@ nav > div.nav > ul.logo {
   margin-left: 5px;
 }
 /* the individual nav links */
-nav > div.nav > ul.logo > li.nav-link  {
+nav > div.nav > ul.logo > li.nav-link {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80px;
-  padding:  0;
+  padding: 0;
   text-align: center;
 }
 /** the menu toggle */
@@ -239,6 +239,10 @@ nav > div.nav > ul.nav-links {
   width: 50%;
   height: 30px;
   margin: 10px 0;
+}
+nav > div.nav > ul.logo > li.nav-link a,
+nav > div.nav > ul.nav-links li.nav-link a {
+  padding: 10px;
 }
 /** header */
 header {
@@ -384,12 +388,14 @@ section#about > div > div.contacts {
 }
 /* about section contact links icon */
 section#about > div > div.contacts > p.contact-link {
+  position: relative;
   width: 30px;
   height: 30px;
   padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -470,6 +476,8 @@ section#projects
   > div.project
   > div.btn-div
   > button {
+  position: relative;
+  overflow: hidden;
   width: 100px;
   height: 30px;
   background-color: rgba(163, 168, 112, 0.164);
@@ -677,7 +685,7 @@ footer div.title {
   height: initial;
 }
 @media screen and (max-width: 770px) {
-    :root {
+  :root {
     --section-div-margin: 40px 70px;
     --section-div-padding: 10px;
   }
@@ -700,39 +708,37 @@ footer div.title {
     margin-right: 5px;
   }
   /* nav links */
-nav > div.nav > ul.nav-links {
-  display: block;
-  position: absolute;
-  top: var(--nav-height);
-  right: 0%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--main-bg);
-  width: 50%;
-  height: 300px;
-  margin: 0;
-  border-left: solid 1px;
-  border-right: solid 1px;
-}
+  nav > div.nav > ul.nav-links {
+    display: block;
+    position: absolute;
+    top: var(--nav-height);
+    right: -40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--main-bg);
+    width: 50%;
+    height: 300px;
+    margin: 0;
+    border: solid 1px;
+  }
   /* the individual links in the nav links */
-nav > div.nav > ul.nav-links > li.nav-link {
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: solid 1px;
-}
-nav > div.nav > ul.nav-links > li.nav-link a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 15px 0;
-}
+  nav > div.nav > ul.nav-links > li.nav-link {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav > div.nav > ul.nav-links > li.nav-link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 19px 0;
+  }
   /* about section profile image */
   section#about div.profile-img {
     display: none;
@@ -774,30 +780,145 @@ nav > div.nav > ul.nav-links > li.nav-link a {
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
-}
+  }
 }
 @media screen and (max-width: 500px) {
-    :root {
+  :root {
     --section-div-margin: 40px 20px;
   }
   /** contact list */
   footer > div > div {
     width: 300px;
   }
-  header > div > div.profile-img > figure{
+  header > div > div.profile-img > figure {
     width: 250px;
     height: 230px;
   }
-   header > div > div.profile-img > figure> img{
+  header > div > div.profile-img > figure > img {
     width: 240px;
     height: 220px;
   }
 }
 @media screen and (max-width: 320px) {
-    :root {
+  :root {
     --section-div-margin: 40px 0px;
   }
-}  
-.show{
+}
+.show {
   display: block;
+}
+/*! the animation states */
+/* the individual nav links */
+nav > div.nav > ul.logo > li.nav-link a,
+nav > div.nav > ul.nav-links li.nav-link a {
+  transition: background 1s, color 1s;
+  -webkit-transition: background 1s, color 1s;
+  -moz-transition: background 1s, color 1s;
+  -ms-transition: background 1s, color 1s;
+  -o-transition: background 1s, color 1s;
+}
+nav > div.nav > ul.logo > li.nav-link a:hover,
+nav > div.nav > ul.nav-links li.nav-link a:hover {
+  background-color: var(--main-color);
+  color: var(--main-bg);
+}
+/** profile image */
+header > div > div.profile-img > figure > img,
+section#about img {
+  transition: top 300ms, left 300ms;
+  -webkit-transition: top 300ms, left 300ms;
+  -moz-transition: top 300ms, left 300ms;
+  -ms-transition: top 300ms, left 300ms;
+  -o-transition: top 300ms, left 300ms;
+}
+/* profile image on hover */
+header > div > div.profile-img > figure:hover > img,
+section#about figure:hover img {
+  top: 0px;
+  left: 0px;
+}
+/** profile image figure */
+header > div > div.profile-img > figure,
+section#about div.profile-img > figure {
+  transition: box-shadow 300ms;
+  -webkit-transition: box-shadow 300ms;
+  -moz-transition: box-shadow 300ms;
+  -ms-transition: box-shadow 300ms;
+  -o-transition: box-shadow 300ms;
+}
+/* profile image figure on hover */
+header > div > div.profile-img > figure:hover,
+section#about div.profile-img > figure:hover {
+  box-shadow: 0px 0px 20px inset;
+}
+/** about section contact links icon */
+section#about > div > div.contacts > p.contact-link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: inherit;
+  height: inherit;
+  left: 0;
+  top: -100%;
+  background-color: var(--main-color);
+  transition: top 300ms;
+  -webkit-transition: top 300ms;
+  -moz-transition: top 300ms;
+  -ms-transition: top 300ms;
+  -o-transition: top 300ms;
+}
+/* about section contact links icon on hover */
+section#about > div > div.contacts > p.contact-link:hover::before {
+  top: 100%;
+}
+/** project buttons */
+section#projects
+  > div
+  > div.project-section
+  > div.project
+  > div.btn-div
+  > button::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: -100%;
+  background-image: linear-gradient(
+    45deg,
+    rgba(238, 238, 238, 0),
+    rgba(255, 217, 0, 0.2),
+    rgba(238, 238, 238, 0)
+  );
+  transition: left 300ms;
+  -webkit-transition: left 300ms;
+  -moz-transition: left 300ms;
+  -ms-transition: left 300ms;
+  -o-transition: left 300ms;
+}
+/* project buttons on hover */
+section#projects
+  > div
+  > div.project-section
+  > div.project
+  > div.btn-div
+  > button:hover::before {
+  left: 100%;
+}
+/** footer icons */
+footer i {
+  transition: transform 500ms;
+  -webkit-transition: transform 500ms;
+  -moz-transition: transform 500ms;
+  -ms-transition: transform 500ms;
+  -o-transition: transform 500ms;
+}
+/* footer icons on hover */
+footer i:hover {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
 }
