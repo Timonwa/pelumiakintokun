@@ -720,7 +720,7 @@ footer div.title {
     display: block;
     position: absolute;
     top: var(--nav-height);
-    right: -40%;
+    right: -50%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -728,7 +728,7 @@ footer div.title {
     align-items: center;
     background-color: var(--main-bg);
     width: 50%;
-    height: 300px;
+    height: 320px;
     margin: 0;
     border: solid 1px;
   }
@@ -736,6 +736,7 @@ footer div.title {
   nav > div.nav > ul.nav-links > li.nav-link {
     width: 100%;
     height: 70px;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -929,4 +930,22 @@ footer p:hover {
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
+}
+
+
+/* ! animation2 */
+body div.container{
+  animation-name: bdy;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+@keyframes bdy{
+  0%{
+    
+  }
+  100%{
+    visibility: visible;
+  }
 }
