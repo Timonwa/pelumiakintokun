@@ -151,6 +151,13 @@ ul {
 /*! end of basic css styles */
 /*! ========== */
 /** body */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
 body div.container {
   display: flex;
   flex-direction: column;
@@ -188,7 +195,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10;
   width: 100vw;
 }
 /** nav-bar */
@@ -262,6 +269,7 @@ header > div div#intro {
   align-items: center;
   width: 50%;
   padding: 20px;
+  position: relative;
 }
 /* my name and occupation */
 header > div > div#intro > div.my-name {
@@ -907,7 +915,7 @@ section#projects
   left: 100%;
 }
 /** footer icons */
-footer i {
+footer p {
   transition: transform 500ms;
   -webkit-transition: transform 500ms;
   -moz-transition: transform 500ms;
@@ -915,7 +923,7 @@ footer i {
   -o-transition: transform 500ms;
 }
 /* footer icons on hover */
-footer i:hover {
+footer p:hover {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
