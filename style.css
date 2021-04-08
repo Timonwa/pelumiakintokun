@@ -935,10 +935,10 @@ footer p:hover {
 
 /* ! animation2 */
 body div.container{
-  animation-name: bdy;
+  /* animation-name: bdy; */
   animation-duration: 2s;
   animation-delay: 2s;
-  visibility: hidden;
+  /* visibility: hidden; */
   animation-fill-mode: forwards;
 }
 @keyframes bdy{
