@@ -642,12 +642,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 200px;
+  /* height: 200px; */
   padding-bottom: 10px;
   width: 100vw;
 }
 footer > div {
-  margin: 0 30px;
+  margin: 30px 30px 0;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -656,6 +656,7 @@ footer > div {
 }
 /** contact list */
 footer > div > div {
+  padding: 20px 0;
   width: 600px;
   display: flex;
   flex-direction: row;
@@ -719,6 +720,11 @@ footer div.title p {
   -moz-transform: none;
   -ms-transform: none;
   -o-transform: none;
+}
+@media screen and (max-width:1000px) {
+  section#skills > div {
+    margin: 40px 20px;
+  }
 }
 @media screen and (max-width: 770px) {
   :root {
@@ -817,9 +823,6 @@ footer div.title p {
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
-  }
-  section#skills > div {
-    margin: 40px 20px;
   }
 }
 @media screen and (max-width: 500px) {
