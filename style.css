@@ -187,9 +187,6 @@ i {
 h3 {
   text-shadow: 0px 0px 2px;
 }
-.show {
-  visibility: visible;
-}
 /* nav */
 nav {
   background-color: var(--main-bg);
