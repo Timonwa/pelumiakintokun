@@ -1,3 +1,3 @@
 function myFunction() {
-    document.getElementById("menu").classList.toggle("show");
+    document.getElementsByClassName("nav-links").classList.toggle("show");
 };
