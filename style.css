@@ -833,12 +833,12 @@ footer div.title p {
     width: 300px;
   }
   header > div > div.profile-img > figure {
+    height: 270px;
     width: 250px;
-    height: 230px;
   }
   header > div > div.profile-img > figure > img {
+    height: 260px;
     width: 240px;
-    height: 220px;
   }
   /** contact list */
   footer > div > div > p {
