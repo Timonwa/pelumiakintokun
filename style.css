@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Langar', cursive;
+    src: url('../fonts/Langar-regular.ttf');
+  }
+@font-face {
+    font-family: 'Texturina', serif;
+    src: url('../fonts/Texturina-VaribleFont_opsz,wght.ttf');
+  }
 /*! root file */
 :root {
   /** variables */
@@ -36,7 +44,7 @@
 /* body */
 body {
   font-size: 18px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Texturina', serif;
   font-weight: normal;
   background-color: var(--main-bg);
   color: var(--main-color);
@@ -176,9 +184,11 @@ h4,
 h5,
 h6 {
   color: var(--main-color2);
+  font-family: 'Langar', cursive;
 }
 p {
   color: var(--main-color3);
+  
 }
 i {
   color: var(--main-color);
@@ -283,6 +293,7 @@ header > div > div#intro > div.my-name {
 header > div div.my-name > h3 {
   text-align: left;
   margin-bottom: 5px;
+  font-family: 'Texturina', serif;
 }
 /* my occupation */
 header > div div.my-name > h5 {
@@ -290,6 +301,7 @@ header > div div.my-name > h5 {
   margin-bottom: 0;
   color: var(--main-color);
   text-shadow: 0px 0px 1px var(--main-color3);
+
 }
 /* my profile image */
 header > div div.profile-img,
