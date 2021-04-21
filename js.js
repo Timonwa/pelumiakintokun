@@ -1,4 +1,4 @@
-function myfunction(){
+function menu(){
     if (document.getElementById("open").style.display === "block"  )
     {
     document.getElementById("open").style.display = "none";
@@ -12,3 +12,9 @@ function myfunction(){
     document.getElementById("menu").style.right = "-50%";
     }
 };
+
+function navLinkCloseMenu(){
+    document.getElementById("open").style.display = "block";
+    document.getElementById("close").style.display = "none";
+    document.getElementById("menu").style.right = "-50%"; 
+}
