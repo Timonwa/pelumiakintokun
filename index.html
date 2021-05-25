@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Pelumi Akintokun's web developement portfolio | Homepage</title>
+    <title>Pelumi Akintokun, Frontend web developer website and portfolio | Homepage</title>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -52,11 +52,21 @@
           </ul>
           <!-- navigation links -->
           <ul class="nav-links" id="menu">
-            <li onclick="navLinkCloseMenu()" class="nav-link"><a href="#intro">Home</a></li>
-            <li onclick="navLinkCloseMenu()" class="nav-link"><a href="#about">About</a></li>
-            <li onclick="navLinkCloseMenu()" class="nav-link"><a href="#projects">Projects</a></li>
-            <li onclick="navLinkCloseMenu()" class="nav-link"><a href="#skills">Skills</a></li>
-            <li onclick="navLinkCloseMenu()" class="nav-link"><a href="#contact">Contact</a></li>
+            <li onclick="navLinkCloseMenu()" class="nav-link">
+              <a href="#intro">Home</a>
+            </li>
+            <li onclick="navLinkCloseMenu()" class="nav-link">
+              <a href="#about">About</a>
+            </li>
+            <li onclick="navLinkCloseMenu()" class="nav-link">
+              <a href="#projects">Projects</a>
+            </li>
+            <li onclick="navLinkCloseMenu()" class="nav-link">
+              <a href="#skills">Skills</a>
+            </li>
+            <li onclick="navLinkCloseMenu()" class="nav-link">
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
           <!-- menu toggle -->
           <div class="menu-toggle" onclick="menu()">
@@ -217,7 +227,10 @@
             <div class="project">
               <!-- preview image of the project -->
               <figure>
-                <img src="img/project/tim-hub.png" alt="tim-hub website homepage snapshot" />
+                <img
+                  src="img/project/tim-hub.png"
+                  alt="tim-hub website homepage snapshot"
+                />
               </figure>
               <!-- brief discription -->
               <p>
@@ -229,11 +242,13 @@
               <div class="btn-div">
                 <!-- github link -->
                 <button class="link-btn">
-                  <a href="https://github.com/Timonwa/Tim-hub">GitHub</a><i class="fas fa-link"></i>
+                  <a href="https://github.com/Timonwa/Tim-hub">GitHub</a
+                  ><i class="fas fa-link"></i>
                 </button>
                 <!-- deployment link -->
                 <button class="link-btn">
-                  <a href="https://timhub.vercel.app">Website</a><i class="fas fa-link"></i>
+                  <a href="https://timhub.vercel.app">Website</a
+                  ><i class="fas fa-link"></i>
                 </button>
               </div>
               <!-- tags -->
@@ -247,19 +262,28 @@
             <div class="project">
               <!-- preview image of the project -->
               <figure>
-                <img src="img/project/luxury-website.png" alt="luxury website homepage snapshot" />
+                <img
+                  src="img/project/luxury-website.png"
+                  alt="luxury website homepage snapshot"
+                />
               </figure>
               <!-- brief discription -->
-              <p>A Real-Estate website. All links are working.<i class="fas fa-arrow"></i></p>
+              <p>
+                A Real-Estate website. All links are working.<i
+                  class="fas fa-arrow"
+                ></i>
+              </p>
               <!-- links to github and deployment -->
               <div class="btn-div">
                 <!-- github link -->
                 <button class="link-btn">
-                  <a href="https://github.com/Timonwa/Luxury">GitHub</a><i class="fas fa-link"></i>
+                  <a href="https://github.com/Timonwa/Luxury">GitHub</a
+                  ><i class="fas fa-link"></i>
                 </button>
                 <!-- deployment link -->
                 <button class="link-btn">
-                  <a href="https://luxury-nu.vercel.app">Website</a><i class="fas fa-link"></i>
+                  <a href="https://luxury-nu.vercel.app">Website</a
+                  ><i class="fas fa-link"></i>
                 </button>
               </div>
               <!-- tags -->
@@ -405,6 +429,76 @@
         </div>
       </section>
 
+      <section id="contact-form">
+        <div id="fcf-form">
+          <h3 class="fcf-h3">Contact us</h3>
+        <div class="form-section">
+          <form
+            id="fcf-form-id"
+            class="fcf-form-class"
+            method="post"
+            action="/contact-form-process.php"
+          >
+            <div class="fcf-form-group">
+              <label for="Name" class="fcf-label">Your name</label>
+              <div class="fcf-input-group">
+                <input
+                  type="text"
+                  id="Name"
+                  name="Name"
+                  class="fcf-form-control"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="fcf-form-group">
+              <label for="Email" class="fcf-label">Your email address</label>
+              <div class="fcf-input-group">
+                <input
+                  type="email"
+                  id="Email"
+                  name="Email"
+                  class="fcf-form-control"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="fcf-form-group">
+              <label for="Message" class="fcf-label">Your message</label>
+              <div class="fcf-input-group">
+                <textarea
+                  id="Message"
+                  name="Message"
+                  class="fcf-form-control"
+                  rows="6"
+                  maxlength="3000"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="fcf-form-group">
+              <button
+                type="submit"
+                id="fcf-button"
+                class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block"
+              >
+                Send Message
+              </button>
+            </div>
+
+            <div class="fcf-credit" id="fcf-credit">
+              Simple HTML email form provided by:
+              <a href="https://www.freecontactform.com" target="_blank"
+                >FreeContactForm.com</a
+              >
+            </div>
+          </form>
+        </div>
+        </div>
+      </section>
       <!--* footer/contact list -->
       <footer id="contact">
         <div>

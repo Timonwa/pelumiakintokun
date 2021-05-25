@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Langar', cursive;
-    src: url('../fonts/Langar-regular.ttf');
-  }
+  font-family: "Langar", cursive;
+  src: url("../fonts/Langar-regular.ttf");
+}
 @font-face {
-    font-family: 'Texturina', serif;
-    src: url('../fonts/Texturina-VaribleFont_opsz,wght.ttf');
-  }
+  font-family: "Texturina", serif;
+  src: url("../fonts/Texturina-VaribleFont_opsz,wght.ttf");
+}
 /*! root file */
 :root {
   /** variables */
@@ -44,7 +44,7 @@
 /* body */
 body {
   font-size: 18px;
-  font-family: 'Texturina', serif;
+  font-family: "Texturina", serif;
   font-weight: normal;
   background-color: var(--main-bg);
   color: var(--main-color);
@@ -184,11 +184,10 @@ h4,
 h5,
 h6 {
   color: var(--main-color2);
-  font-family: 'Langar', cursive;
+  font-family: "Langar", cursive;
 }
 p {
   color: var(--main-color3);
-  
 }
 i {
   color: var(--main-color);
@@ -293,7 +292,7 @@ header > div > div#intro > div.my-name {
 header > div div.my-name > h3 {
   text-align: left;
   margin-bottom: 5px;
-  font-family: 'Texturina', serif;
+  font-family: "Texturina", serif;
 }
 /* my occupation */
 header > div div.my-name > h5 {
@@ -301,7 +300,6 @@ header > div div.my-name > h5 {
   margin-bottom: 0;
   color: var(--main-color);
   text-shadow: 0px 0px 1px var(--main-color3);
-
 }
 /* my profile image */
 header > div div.profile-img,
@@ -761,7 +759,7 @@ footer div.title p {
   nav > div.nav > ul.nav-links {
     position: absolute;
     top: var(--nav-height);
-    right: -50%;
+    right: -60%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -996,3 +994,165 @@ body div.container {
     visibility: visible;
   }
 }
+
+/** contact form */
+section#contact-form {
+  background-color: var(--main-bg2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+/* contact form section container */
+section#contact-form > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: var(--section-div-margin);
+  padding: var(--section-div-padding);
+}
+/* contact form section container */
+section#contact-form > div > .form-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+/* contact form section groupings */
+section#contact-form > div > .form-section > form {
+  /* border: solid 1px; */
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 320px;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: var(--main-bg);
+}
+/* form input and label container */
+section#contact-form > div > .form-section > form > .fcf-form-group {
+  padding: 10px;
+}
+/* label */
+section#contact-form > div > .form-section > form > .fcf-form-group > label {
+  font-weight: 600;
+  color: var(--main-color3);
+  font-family: "Texturina", serif;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+/* input div */
+section#contact-form
+  > div
+  > .form-section
+  > form
+  > .fcf-form-group
+  > .fcf-input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+/* input */
+section#contact-form
+  > div
+  > .form-section
+  > form
+  > .fcf-form-group
+  > .fcf-input-group
+  > .fcf-form-control{
+  font-size: 0.8rem;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 5px 10px;
+  /*background-clip: padding-box;
+  */border: solid 1px var(--main-color);
+  outline: none;
+  color: var(--main-color3);
+  background-image:  linear-gradient(    90deg,    var(--main-bg),    var(--main-bg2),    var(--main-bg3)  );
+  border-radius: 0.25rem;
+  font-family: "Langar", cursive;
+  transition: border-color 0.15s ease-in-out;
+  -webkit-transition: border-color 0.15s ease-in-out;
+  -moz-transition: border-color 0.15s ease-in-out;
+  -ms-transition: border-color 0.15s ease-in-out;
+  -o-transition: border-color 0.15s ease-in-out;
+}
+/* input focus */
+section#contact-form
+  > div
+  > .form-section
+  > form
+  > .fcf-form-group
+  > .fcf-input-group
+  > .fcf-form-control:focus {
+  border: 1px solid var(--main-color2);
+}
+/* textarea */
+section#contact-form
+  > div
+  > .form-section
+  > form
+  > .fcf-form-group
+  > .fcf-input-group >
+textarea.fcf-form-control {
+  height: auto;
+}
+/** form attribution */
+.fcf-credit {
+  display: none;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #545b62;
+}
+.fcf-credit a {
+  color: #545b62;
+  text-decoration: underline;
+}
+.fcf-credit a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+/* button */
+.fcf-btn {
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Langar", cursive;
+  color: var(--main-bg);
+  background-image:  linear-gradient(    90deg,    var(--main-color2),    var(--main-color3),    var(--main-color)  );
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -moz-transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -ms-transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.fcf-btn:hover {
+  color: var(--main-color2);
+  background-image:  linear-gradient(
+    90deg,
+    var(--main-bg),
+    var(--main-bg2),
+    var(--main-bg3)
+  );
+  box-shadow: 0px 0px 5px var(--main-color);
+}
+@media (prefers-reduced-motion: reduce) {
+  .fcf-btn {
+    transition: none;
+  }
+}
+

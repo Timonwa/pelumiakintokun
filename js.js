@@ -9,7 +9,7 @@ function menu(){
     {
     document.getElementById("open").style.display = "block";
     document.getElementById("close").style.display = "none";
-    document.getElementById("menu").style.right = "-50%";
+    document.getElementById("menu").style.right = "-60%";
     }
 };
 
