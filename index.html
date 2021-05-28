@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Pelumi Akintokun, Frontend web developer website and portfolio | Homepage</title>
+    <title>
+      Pelumi Akintokun, Frontend web developer website and portfolio | Homepage
+    </title>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -115,10 +117,14 @@
             <!-- description body -->
             <div class="about-description">
               <p>
-                Hi! I'm Timonwa, some people also call me Pelumi. I'm a rising Front-end developer who loves CSS even though it's a pain in the ass sometimes. I love interpreting clients designs and ideas and turning them into Front-end masterpieces.
+                Hi! I'm Timonwa, some people also call me Pelumi. I'm a rising
+                Front-end developer who loves CSS even though it's a pain in the
+                ass sometimes. I love interpreting clients designs and ideas and
+                turning them into Front-end masterpieces.
               </p>
               <p>
-                I'm currently improving my Javascript skills and I can't wait to start doing more challenging JavaScript oriented projects. 
+                I'm currently improving my Javascript skills and I can't wait to
+                start doing more challenging JavaScript oriented projects.
               </p>
             </div>
           </div>
@@ -425,71 +431,75 @@
       <section id="contact-form">
         <div id="fcf-form">
           <h3 class="fcf-h3">Contact us</h3>
-        <div class="form-section">
-          <form
-            id="fcf-form-id"
-            class="fcf-form-class"
-            method="post"
-            action="/contact-form-process.php"
-          >
-            <div class="fcf-form-group">
-              <label for="name" class="fcf-label">Your name</label>
-              <div class="fcf-input-group">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="fcf-form-control"
-                  required
-                />
+          <div class="form-section">
+            <form
+              id="fcf-form-id"
+              class="fcf-form-class"
+              method="POST"
+              action="https://formsubmit.co/pelumiakintokun@gmail.com"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New email submission from your website!"
+              />
+              <input type="text" name="_honey" style="display: none" />
+              <input
+                type="hidden"
+                name="_autoresponse"
+                value="Thank you for contacting me, I will reply to your message as soon as possible."
+              />
+              <div class="fcf-form-group">
+                <label for="name" class="fcf-label">Your name</label>
+                <div class="fcf-input-group">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="fcf-form-control"
+                    required
+                  />
+                </div>
               </div>
-            </div>
 
-            <div class="fcf-form-group">
-              <label for="email" class="fcf-label">Your email address</label>
-              <div class="fcf-input-group">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="fcf-form-control"
-                  required
-                />
+              <div class="fcf-form-group">
+                <label for="email" class="fcf-label">Your email address</label>
+                <div class="fcf-input-group">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="fcf-form-control"
+                    required
+                  />
+                </div>
               </div>
-            </div>
 
-            <div class="fcf-form-group">
-              <label for="message" class="fcf-label">Your message</label>
-              <div class="fcf-input-group">
-                <textarea
-                  id="message"
-                  name="message"
-                  class="fcf-form-control"
-                  rows="6"
-                  maxlength="3000"
-                  required
-                ></textarea>
+              <div class="fcf-form-group">
+                <label for="message" class="fcf-label">Your message</label>
+                <div class="fcf-input-group">
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="fcf-form-control"
+                    rows="6"
+                    maxlength="3000"
+                    required
+                  ></textarea>
+                </div>
               </div>
-            </div>
 
-            <div class="fcf-form-group">
-              <button
-                type="submit"
-                id="fcf-button"
-                class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block"
-              >
-                Send Message
-              </button>
-            </div>
-
-            <div class="fcf-credit" id="fcf-credit">
-              Simple HTML email form provided by:
-              <a href="https://www.freecontactform.com" target="_blank"
-                >FreeContactForm.com</a
-              >
-            </div>
-          </form>
-        </div>
+              <div class="fcf-form-group">
+                <button
+                  type="submit"
+                  id="fcf-button"
+                  class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
       <!--* footer/contact list -->
