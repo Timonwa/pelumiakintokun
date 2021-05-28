@@ -1067,17 +1067,23 @@ section#contact-form
   > form
   > .fcf-form-group
   > .fcf-input-group
-  > .fcf-form-control{
+  > .fcf-form-control {
   font-size: 0.8rem;
   display: block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 5px 10px;
   /*background-clip: padding-box;
-  */border: solid 1px var(--main-color);
+  */
+  border: solid 1px var(--main-color);
   outline: none;
   color: var(--main-color3);
-  background-image:  linear-gradient(    90deg,    var(--main-bg),    var(--main-bg2),    var(--main-bg3)  );
+  background-image: linear-gradient(
+    90deg,
+    var(--main-bg),
+    var(--main-bg2),
+    var(--main-bg3)
+  );
   border-radius: 0.25rem;
   font-family: "Langar", cursive;
   transition: border-color 0.15s ease-in-out;
@@ -1102,8 +1108,8 @@ section#contact-form
   > .form-section
   > form
   > .fcf-form-group
-  > .fcf-input-group >
-textarea.fcf-form-control {
+  > .fcf-input-group
+  > textarea.fcf-form-control {
   height: auto;
 }
 /** form attribution */
@@ -1127,22 +1133,32 @@ textarea.fcf-form-control {
   font-size: 1.2rem;
   font-family: "Langar", cursive;
   color: var(--main-bg);
-  background-image:  linear-gradient(    90deg,    var(--main-color2),    var(--main-color3),    var(--main-color)  );
+  background-image: linear-gradient(
+    90deg,
+    var(--main-color2),
+    var(--main-color3),
+    var(--main-color)
+  );
   display: block;
   width: 100%;
   cursor: pointer;
   border: none;
   padding: 10px;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -webkit-transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -moz-transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -ms-transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -o-transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  -webkit-transition: color 0.15s ease-in-out,
+    background-image 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -moz-transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  -ms-transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 .fcf-btn:hover {
   color: var(--main-color2);
-  background-image:  linear-gradient(
+  background-image: linear-gradient(
     90deg,
     var(--main-bg),
     var(--main-bg2),
@@ -1156,3 +1172,42 @@ textarea.fcf-form-control {
   }
 }
 
+.thank-you-cntr {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+.thank-you-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 30px 20px;
+  background-color: var(--main-bg2);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.thank-you-cntr button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--main-color2);
+  background-image: linear-gradient(
+    90deg,
+    var(--main-bg),
+    var(--main-bg2),
+    var(--main-bg3)
+  );
+  box-shadow: 0px 0px 5px var(--main-color);
+}
