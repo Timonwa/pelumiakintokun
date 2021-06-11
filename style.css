@@ -24,6 +24,9 @@
   --section-div-margin: 40px 100px;
   --section-div-padding: 20px;
 }
+html{
+  scroll-behavior: smooth;
+}
 /** all elements */
 * {
   margin: 0;
